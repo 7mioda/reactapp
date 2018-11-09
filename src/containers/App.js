@@ -26,7 +26,7 @@ import Photos from '../components/Photos';
                       <Navigation count={this.props.wishListCount}/>
                       <Switch>
                         <Route path="/"  render={()=><Albums albums={this.props.albums}/>} exact />
-                        <Route path="/photos/:idAlbum" render={()=><Photos photos={this.props.photos} getPhotos={this.props.fetchPhotos} addtowishlist={this.props.addToWishList}  /> } />
+                        <Route path="/photo" render={()=><Photos photos={this.props.photos} getPhotos={this.props.fetchPhotos} addtowishlist={this.props.addToWishList}  /> } />
                         <Route path="/wishlist" render={()=> <WishList wishlist={this.props.wishlist} /> } />
                       </Switch>
                  </div>
