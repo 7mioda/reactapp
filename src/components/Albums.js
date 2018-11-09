@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 export default (props) => {
 
     const albums = props.albums.map(element => (
-      <NavLink to="/photos">{}</NavLink>
+      <div key={element.id}>
+        <h3>{element.title}</h3>
+      </div>
     ))
   return (
     <div>
