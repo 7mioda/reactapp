@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const divStyle = {
   display: 'flex',
@@ -16,7 +17,7 @@ const imgStyle = {
 export default (props) => {
   const photos = props.wishlist.map(element => (
     <div style={divStyle} key={element.id}>
-      <img src={element.url} style={imgStyle} ></img>
+      <NavLink to={`/photo/${element.id}`} ><img src={element.url} style={imgStyle} ></img></NavLink>
     </div>
     ));
 

@@ -1,7 +1,8 @@
-import { FETCH_PHOTOS } from '../actions/types';
+import { FETCH_PHOTOS, FETCH_PHOTO } from '../actions/types';
 
 const initialState = {
-    photos: []
+    photos: [],
+    photo: {}
   };
 
 const photoReducer = (state = initialState, action) => {
@@ -12,6 +13,12 @@ const photoReducer = (state = initialState, action) => {
                 photos: action.payload
             };
             break;
+         case FETCH_PHOTO :
+            state = {
+                ...state,
+                photo: action.payload
+            };
+            break;   
     }
     return state;
 };
